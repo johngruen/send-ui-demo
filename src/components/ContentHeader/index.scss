@@ -1,0 +1,20 @@
+@import "~photon-colors/photon-colors";
+
+.content-header {
+  margin: 24px 24px 0;
+  display: flex;
+  flex-direction: column;
+
+  .content-header__title {
+    font-size: 16px;
+    margin: 0 0 6px;
+  }
+
+  .content-header__subtitle {
+    color: $grey-40;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0;
+  }
+}

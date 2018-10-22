@@ -1,0 +1,15 @@
+@import '~photon-colors/photon-colors';
+
+.header {
+  flex: 0 0 64px;
+  background: $white-100;
+  box-shadow: 0 2px 6px $grey-90-a10, 0 1px 0 $grey-90-a50 inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+}

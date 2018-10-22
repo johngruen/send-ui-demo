@@ -1,0 +1,21 @@
+@import '~photon-colors/photon-colors';
+
+.layout {
+  background: $grey-10;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.layout__main {
+  background: $white-100;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px $grey-30;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  margin: 0 auto;
+  max-width: 90%;
+  width: 800px;
+}

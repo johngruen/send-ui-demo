@@ -1,0 +1,122 @@
+@import '~photon-colors/photon-colors';
+@import '../../utils/utils';
+
+$transparent-blue-a10: rgba(132, 193, 255, 0.1);
+$transparent-blue-a20: rgba(132, 193, 255, 0.2);
+
+.sender-area {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-gap: 24px;
+  height: 100%;
+  margin: 24px;
+
+  .sender-area__draggable {
+    align-items: center;
+    border-radius: 2px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 12px;
+    transition: border-color 500ms, background 150ms;
+  }
+
+  .sender-area__button {
+    @include button;
+    @include button-transparent;
+  }
+
+  &.sender-area--files {
+    grid-template-columns: 1fr 1fr;
+
+    .sender-area__draggable {
+      background: $transparent-blue-a10;
+      border: 2px dashed $blue-50;
+    }
+
+    .sender-area__file-list {
+      flex: 1;
+      width: 100%;
+    }
+
+    .sender-area__plus-icon {
+      border: 2px solid $blue-50;
+      border-radius: 50%;
+      height: 24px;
+      margin-right: 12px;
+      width: 24px;
+    }
+  }
+
+  &.sender-area--no-files {
+    .sender-area__draggable {
+      border: 2px dashed $grey-40;
+      justify-content: center;
+
+      &:hover {
+        background: $transparent-blue-a10;
+        border-color: $blue-50;
+      }
+    }
+
+    .sender-area__plus-icon {
+      border: 3px solid $blue-50;
+      border-radius: 50%;
+      height: 60px;
+      margin-bottom: 27px;
+      width: 60px;
+    }
+
+    .sender-area__title {
+      font-size: 24px;
+      margin: 0 0 6px;
+      text-transform: uppercase;
+    }
+
+    .sender-area__subtitle {
+      font-size: 16px;
+      font-style: italic;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .sender-area__button {
+      @include button(248px);
+      @include button-default;
+
+      margin-top: 32px;
+    }
+  }
+}
+
+.file {
+  background: $white-100;
+  border: 1px solid $grey-30;
+  border-radius: 2px;
+  height: 72px;
+  margin-bottom: 12px;
+  width: 100% !important;
+}
+
+.upload-controls {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .upload-controls__button {
+    @include button(312px);
+    @include button-default;
+
+    margin-top: 24px;
+  }
+
+  div {
+    font-size: 12px;
+  }
+
+  span {
+    padding: 5px;
+    background: $grey-20;
+  }
+}
